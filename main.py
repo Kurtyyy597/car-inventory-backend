@@ -10,9 +10,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Vite default
+    allow_origins=[
+        "http://localhost:5173",
+        "https://car-inventory-frontend-v1ma58r2o-kurtyyy597s-projects.vercel.app",
+    ],
     allow_credentials=True,
-    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
