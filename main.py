@@ -10,11 +10,8 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://car-inventory-frontend-v1ma58r2o-kurtyyy597s-projects.vercel.app",
-        "http://localhost:5173",
-    ],
-    allow_credentials=False,
+    allow_origins=["*"],  # allow all origins
+    allow_credentials=False,  # IMPORTANT
     allow_methods=["*"],
     allow_headers=["*"],
 )
